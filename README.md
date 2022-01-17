@@ -18,7 +18,7 @@ caso duvidas entre em contato! ( Clique Em Cima )
     
 - [Meu Grupo (Para Duvidas & Usar os Bots De La)](https://chat.whatsapp.com/DPZKtPOZvUBIsaluTNB5rh)
     
-- [LZ MODS](https://wa.me/556284944742)
+- [Meu Numero](https://wa.me/556284944742)
     
 ----------- Bots Gratis Para Uso -----------
     
