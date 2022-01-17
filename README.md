@@ -1,4 +1,4 @@
-# </Albedo Bot LITE v2/>
+# </Infinity Bot V1.0/>
 <div align="center">
 </div>
 <p align="center">
