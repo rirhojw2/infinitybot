@@ -367,6 +367,8 @@ const isCmd = body.startsWith(prefix)
 //=========================================\\
 
 const { menuprincipal } = require('./menus/menu.js');
+		
+const { gitdobot } = require('./dono/gitdobot.js');
 
 //=======================================\\
 const isUrl = (url) => {
@@ -419,6 +421,13 @@ case 'menu':
 if (!isRG) return reply(`${NotRG}`)
 let fotomenu = fs.readFileSync('./~ Infinity Datab ~/logos/logo.jpg')  
 await lz.sendMessage(from, fotomenu, image, {quoted: selo2, caption: menuprincipal(prefix, pushname, hora, data, NomeDoBot, NickDoDono, NumeroDoDono)})
+break
+		
+case 'git':
+case 'gitdobot':
+if (!isRG) return reply(`${NotRG}`)
+let fotogt = fs.readFileSync('./~ Infinity Datab ~/logos/logo.jpg')  
+await lz.sendMessage(from, fotogt, image, {quoted: selo2, caption: gitdobot(prefix)})
 break
 
 case 'lzmodsapi':
