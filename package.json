@@ -1,7 +1,7 @@
 {
-  "name": "termux-wabot",
-  "version": "0.0.2",
-  "description": "No comment",
+  "name": "Infinity-Bot",
+  "version": "1.0.0",
+  "description": "v1.0.0",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -11,13 +11,13 @@
     "start": "node index.js"
   },
   "keywords": [
-    "termux",
-    "whatsapp",
+    "infinity-bot",
+    "infinity",
     "bot",
     "whatsapp",
-    "bot"
+    "zuckerberg"
   ],
-  "author": "MhankBarBar",
+  "author": "LZ MODS OFICIAL",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/baileys": "^3.4.1",
@@ -40,10 +40,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mhankbarbar/termux-wabot.git"
+    "url": "git+https://github.com/lzmodsoficial/infinitybot.git"
   },
   "bugs": {
-    "url": "https://github.com/mhankbarbar/termux-wabot/issues"
+    "url": "https://github.com/lzmodsoficial/infinitybot/issues"
   },
-  "homepage": "https://github.com/mhankbarbar/termux-wabot#readme"
+  "homepage": "https://github.com/lzmodsoficial/infinitybot#readme"
 }
