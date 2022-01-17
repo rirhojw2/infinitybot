@@ -16,7 +16,7 @@ Um bot simples para whatsapp que está em desenvolvimento.
     
 caso duvidas entre em contato! ( Clique Em Cima )
     
-- [Tio Momonga (Dono Ofc Da Albedo)](https://www.youtube.com/channel/UCEXnX1CqgbV5xVabZG71aUw)
+- [Meu Grupo (Para Duvidas & Usar os Bots De La)](https://chat.whatsapp.com/DPZKtPOZvUBIsaluTNB5rh)
     
 - [LZ MODS](https://wa.me/556284944742)
     
