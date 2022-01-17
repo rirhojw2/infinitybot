@@ -18,7 +18,7 @@ caso duvidas entre em contato! ( Clique Em Cima )
     
 - [Meu Grupo (Para Duvidas & Usar os Bots De La) Entrae :)](https://chat.whatsapp.com/DPZKtPOZvUBIsaluTNB5rh)
     
-- [Meu Numero](https://wa.me/556284944742)
+- [Meu Zap](https://wa.me/556284944742)
 
 ----------- Area De Downloads -----------
     
