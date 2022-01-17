@@ -16,15 +16,11 @@ Um bot simples para whatsapp que está em desenvolvimento.
     
 caso duvidas entre em contato! ( Clique Em Cima )
     
-- [Meu Grupo (Para Duvidas & Usar os Bots De La)](https://chat.whatsapp.com/DPZKtPOZvUBIsaluTNB5rh)
+- [Meu Grupo (Para Duvidas & Usar os Bots De La) Entrae :)](https://chat.whatsapp.com/DPZKtPOZvUBIsaluTNB5rh)
     
 - [Meu Numero](https://wa.me/556284944742)
-    
------------ Bots Gratis Para Uso -----------
-    
-- [Grupo Com Bots ( Clique )](https://chat.whatsapp.com/DPZKtPOZvUBIsaluTNB5rh)
-    
------------ Download -----------
+
+----------- Area De Downloads -----------
     
 - [Baixar Albedo Bot LITE ( Clique )](https://apkadmin.com/cw3za8apaa0h/AlbedoLITE.zip.html)
     
