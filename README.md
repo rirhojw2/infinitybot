@@ -22,7 +22,7 @@ caso duvidas entre em contato! ( Clique Em Cima )
 
 ----------- Area De Downloads -----------
     
- - [Baixar Comandos Para a Instaçao Do Bot ( Clique )](https://www.apkmirror.com/apk/fredrik-fornwall/termux-fdroid-version/termux-fdroid-version-0-118-0-release/termux-fdroid-version-0-118-0-android-apk-download/download/)
+ - [Baixar Comandos Para a Instaçao Do Bot ( Clique )](https://drive.google.com/u/0/uc?id=1J-Q40MqlBw61bBREs_G5LJAapxbnE8No&export=download)
     
 - [Baixar Termux 118 ( Clique )](https://www.apkmirror.com/apk/fredrik-fornwall/termux-fdroid-version/termux-fdroid-version-0-118-0-release/termux-fdroid-version-0-118-0-android-apk-download/download/)
     
