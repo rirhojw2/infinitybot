@@ -22,7 +22,9 @@ caso duvidas entre em contato! ( Clique Em Cima )
 
 ----------- Area De Downloads -----------
     
-- [Baixar Albedo Bot LITE ( Clique )](https://apkadmin.com/cw3za8apaa0h/AlbedoLITE.zip.html)
+ - [Baixar Comandos Para a Instaçao Do Bot ( Clique )](https://www.apkmirror.com/apk/fredrik-fornwall/termux-fdroid-version/termux-fdroid-version-0-118-0-release/termux-fdroid-version-0-118-0-android-apk-download/download/)
+    
+- [Baixar Termux 118 ( Clique )](https://www.apkmirror.com/apk/fredrik-fornwall/termux-fdroid-version/termux-fdroid-version-0-118-0-release/termux-fdroid-version-0-118-0-android-apk-download/download/)
     
 - [Baixar Termux 117 ( Clique )](https://www.mediafire.com/file/plyu1fbkc9hpss4/Termux_117.apk/file)
     
@@ -33,7 +35,7 @@ caso duvidas entre em contato! ( Clique Em Cima )
  
 quando pausar e aparecer "[default=N] ?" Ou Algo Parecido Aperte Enter Ok?
 
-pkg upgrade -y && pkg update -y && pkg install nodejs -y && pkg install nodejs-lts -y && pkg install wget -y && pkg install git -y && pkg install python -y
+pkg upgrade -y && pkg update -y && apt update -y && apt upgrade -y && pkg install nodejs -y && pkg install nodejs-lts -y && pkg install wget -y && pkg install git -y && pkg install python -y
 
 termux-setup-storage 
 
