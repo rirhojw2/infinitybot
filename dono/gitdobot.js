@@ -10,7 +10,7 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ║「 Baileys 」
 ║
 ║Git Hub
-║「https://github.com/lzmodsoficial/infinitybotv1」
+║「https://github.com/lzmodsoficial/infinitybot」
 ║
 ║Comandos Pra Instalação:
 ║ 「 Tudo No Git Hub 」
