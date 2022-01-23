@@ -575,7 +575,7 @@ if (!isRG) return reply(`${NotRG}`)
 if (args.length < 1) return reply(`Cade o Nome Da Musica Mano?? \nExemplo: ${prefix}play rei lacoste`)
 reply(enviar.espere)
 play = body.slice(5)
-anu = await fetchJson(`https://lzmods-api.herokuapp.com/download/play?&nome=${play}&apikey=estreia`)
+anu = await fetchJson(`https://lzmods-api.herokuapp.com/yt/playmp3?&musica=${play}&apikey=lzmods`)
 let resultadoplay = `
 🍀 a Musica「 ${q} 」Foi Encontrada Com Sucesso! 🍀
 
@@ -600,7 +600,7 @@ playvideo = args.join(' ')
 reply(`
 Aguarde o Envio Do Video...
 Videos Muito Pesados Nao Serão Enviados.`)
-anu = await fetchJson(`https://lzmods-api.herokuapp.com/download/playv?&nome=${q}&apikey=estreia`)
+anu = await fetchJson(`https://lzmods-api.herokuapp.com/yt/playmp4?&musica=${q}&apikey=lzmods`)
 let videomsc = await getBuffer(anu.resultado.download)
 lz.sendMessage(from, videomsc, video, {quoted: selo, mimetype: 'video/mp4'})
 break
@@ -610,7 +610,7 @@ if (!isRG) return reply(`${NotRG}`)
 reply(`
 Aguarde o Envio Do Documento...
 Documentos Muito Pesados Nao Serão Enviados.`)
-anu = await fetchJson(`https://lzmods-api.herokuapp.com/download/play?&nome=${q}&apikey=estreia`)
+anu = await fetchJson(`https://lzmods-api.herokuapp.com/yt/playmp3?&musica=${q}&apikey=lzmods`)
 let audeb = await getBuffer(anu.resultado.download)
 lz.sendMessage(from, audeb, document, {quoted: selo, mimetype: 'audio/mp3', filename: `${anu.resultado.titulo}.mp3`})
 break
@@ -623,7 +623,7 @@ if (!isRG) return reply(`${NotRG}`)
 if (args.length < 1) return reply(`Cade o Nome Da Musica Mano?? \nExemplo: ${prefix}playdoc rei lacoste`)
 reply(enviar.espere)
 playdoc = body.slice(8)
-anu = await fetchJson(`https://lzmods-api.herokuapp.com/download/play?&nome=${q}&apikey=estreia`)
+anu = await fetchJson(`https://lzmods-api.herokuapp.com/yt/playmp3?&musica=${q}&apikey=lzmods`)
 let resultadodoc = `
 💎 a Musica「 ${q} 」Encontrada Com Sucesso! 💎
 
@@ -669,7 +669,7 @@ case 'playmp4':
 if (!isRG) return reply(`${NotRG}`)
 if (args.length < 1) return reply(`Cade o Nome Da Musica Mano?? \nExemplo: ${prefix}playmp4 rei lacoste`)
 reply(enviar.espere)
-anu = await fetchJson(`https://lzmods-api.herokuapp.com/download/playv?&nome=${q}&apikey=estreia`)
+anu = await fetchJson(`https://lzmods-api.herokuapp.com/yt/playmp4?&musica=${q}&apikey=lzmods`)
 let resultadomp4 = `
 ✝️ Musica「 ${q} 」Foi Encontrada Com Sucesso! ✝️
 
