@@ -49,15 +49,14 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ║     🎇 Logos 🎇
 ╠┅═┅══⟮ 📌️ ⟯══┅═┅═᳀
 ║
-║➤ ${prefix}gradient ❰ Nome ❱
-║➤ ${prefix}pinkblack ❰ Nome ❱
-║➤ ${prefix}lava ❰ Nome ❱
-║➤ ${prefix}glass ❰ Nome ❱
-║➤ ${prefix}equalizer3d ❰ Nome ❱
-║➤ ${prefix}chroma3d ❰ Nome ❱
-║➤ ${prefix}grafite ❰ Nome ❱
-║➤ ${prefix}joker ❰ Nome ❱
-║➤ ${prefix}toxic ❰ Nome ❱
+║➤ ${prefix}jokerlogo ❰ Nome ❱
+║➤ ${prefix}cameralogo ❰ Nome ❱
+║➤ ${prefix}pornhublogo ❰ Nome/Nome ❱
+║➤ ${prefix}glitchlogo ❰ Nome/Nome ❱
+║➤ ${prefix}harrypoterlogo ❰ Nome ❱
+║➤ ${prefix}neon3d ❰ Nome ❱
+║➤ ${prefix}stonelogo ❰ Nome ❱
+║➤ ${prefix}futurelogo ❰ Nome ❱
 ║
 ╠┅═┅══⟮ 👽️ ⟯══┅═┅═᳀
 ║     ⛓️ Outros ⛓️
