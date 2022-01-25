@@ -1,4 +1,4 @@
-# </Infinity Bot V1.0/>
+# </Infinity Bot V1.5/>
 <div align="center">
 </div>
 <p align="center">
