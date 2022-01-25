@@ -18,8 +18,8 @@ Um bot simples para whatsapp que está em desenvolvimento.
 - linkgp ( Manda o Link Do Grupo )
     
 - Antilink Arrumado
-- Promover a Adm Arrumado
-- Rebaixar a Adm Arrumado
+- Promover Tirado Para Arrumar
+- Rebaixar Tirado Para Arrumar
 - Fazer Figurinhas Arrumado
 - Renomear Figurinhas Arrumado
 - Logos Arrumadas
