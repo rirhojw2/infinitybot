@@ -11,6 +11,17 @@
   <h4 align="center">
 
 Um bot simples para whatsapp que está em desenvolvimento.
+    
+--------- Novidades Da V1.5 ---------
+    
+- Antilink Arrumado
+- Promover a Adm Arrumado
+- Rebaixar a Adm Arrumado
+- Fazer Figurinhas Arrumado
+- Renomear Figurinhas Arrumado
+- Logos Arrumadas
+- Ban Arrumado
+- Reviver Arrumado
    
 ----------- Para Duvidas -----------
     
