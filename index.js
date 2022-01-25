@@ -1055,28 +1055,7 @@ case 'reviver':
 
 //=====================================\\
 
-case 'rebaixar':  // Creditos: Aleatory Bot
-case 'demote':
-case 'membrocomum':
-  if (!isGroup) return reply(enviar.apenas.grupos)
-  if (!isGroupAdmins) return reply(enviar.bad.adm)
-  if (!isBotGroupAdmins) return reply(enviar.bad.BotAdm)
-  const dlp = body.slice(15)
-  if (dlp.length >= 15)return reply(`Exemplo : ${prefix}rebaixar @pessoa`)
-  if (info.message.extendedTextMessage === undefined || info.message.extendedTextMessage === null) return
-  mentioned = info.message.extendedTextMessage.contextInfo.mentionedJid
-  if (mentioned.length > 1) {
-  ytb = 'F\n'
-  for (let _ of mentioned) {
-  ytb += `@${_.split('@')[0]}\n`
-  }
-  mentions(ytb, mentioned, true)
-  await lz.groupRemove(from, mentioned)
-  } else {
-  mentions(`@${mentioned[0].split('@')[0]} perdeu o adm com sucesso!`, mentioned, true)
-  await lz.groupDemoteAdmin(from, mentioned)
-  }
-  break
+
 
 //=====================================\\
 
