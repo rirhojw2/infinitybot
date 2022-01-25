@@ -14,6 +14,9 @@ Um bot simples para whatsapp que está em desenvolvimento.
     
 --------- Novidades Da V1.5 ---------
     
+1 Novo Comando
+- linkgp ( Manda o Link Do Grupo )
+    
 - Antilink Arrumado
 - Promover a Adm Arrumado
 - Rebaixar a Adm Arrumado
