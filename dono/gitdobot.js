@@ -4,13 +4,13 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ║  ☢️ ᏀᏆͲ Ꭰϴ ᏴϴͲ ☢️
 ║
 ║Nome Do Bot:
-║「 Infinity Bot 」
+║「 pangolim boy」
 ║
 ║Lib:
 ║「 Baileys 」
 ║
 ║Git Hub
-║「https://github.com/lzmodsoficial/infinitybot」
+║「」
 ║
 ║Comandos Pra Instalação:
 ║ 「 Tudo No Git Hub 」
@@ -23,11 +23,11 @@ return `​​​​​​​​​​​​​​​​​​​​​​​​
 ║Dono:
 ║「 LZ MODS 」
 ║
-║Canal Do LZ:
-║「 https://youtube.com/channel/UCy0zGQxBX-MXDEAGY6VLJXQ 」
+║Canal Do junin:
+║「 https://www.youtube.com/watch?v=xe9G2z-hxFc&t=26s
 ║
 ╠┅═┅══⟮ 👾 ⟯══┅═┅═᳀
-║  「 ${NomeDoBot} 」
+║  「 ${pangolim} 」
 ╚┅═┅══⟮ ☔ ⟯══┅═┅═᳀
 `
 }
