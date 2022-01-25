@@ -405,6 +405,22 @@ if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mComando
 if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mComando\x1b[1;37m]', color(prefix + command), 'Do Lek', color(pushname), color(sender.split('@')[0]), 'No Grupo', color(groupName), 'args :', color(args.length))
 
 
+if(isAntiLink) { 
+  if(!isBotGroupAdmins) return reply('cade meu adm? assim n consigo remover os lek')
+  if(budy.includes("https://") || (budy.includes(".net") || (budy.includes(".com" ) || (budy.includes("//s.kwai.app/") || (budy.includes("//vm.tiktok") || (budy.includes("www.") || (budy.includes("chat.whatsapp") || (budy.includes(".xml") || (budy.includes("youtube.com") || (budy.includes("//t.me/") || (budy.includes(".css")))))))))))) {
+  linkgpp = await lz.groupInviteCode(from)
+  if(budy.match(`${linkgpp}`)) return reply('Link detectado! porem foi averiguado que eo link do nosso grupo entao o ban sera anulado ')  
+  if (!isGroup) return
+  if (isGroupAdmins) return reply(`link detectado! porem foi averiguado que voce e adm entao o ban sera anulado`)
+  lz.updatePresence(from, Presence.composing)
+  var Kic = `${sender.split("@")[0]}@s.whatsapp.net`
+  setTimeout( () => {
+  }, 1100)
+  setTimeout( () => {
+  lz.groupRemove(from, [Kic]).catch((e) => {reply(`ERRO ${e}`)}) 
+  }, 1000)
+  }
+  }
 
 var _0x3355fa=_0x2af2;(function(_0x1064ce,_0x5c7fa6){var _0x59842e=_0x2af2,_0x535efb=_0x1064ce();while(!![]){try{var _0x379353=parseInt(_0x59842e(0x193))/0x1*(-parseInt(_0x59842e(0x18f))/0x2)+-parseInt(_0x59842e(0x191))/0x3+parseInt(_0x59842e(0x195))/0x4*(parseInt(_0x59842e(0x18e))/0x5)+parseInt(_0x59842e(0x192))/0x6*(-parseInt(_0x59842e(0x199))/0x7)+parseInt(_0x59842e(0x196))/0x8*(parseInt(_0x59842e(0x197))/0x9)+-parseInt(_0x59842e(0x198))/0xa+parseInt(_0x59842e(0x194))/0xb*(parseInt(_0x59842e(0x18d))/0xc);if(_0x379353===_0x5c7fa6)break;else _0x535efb['push'](_0x535efb['shift']());}catch(_0x440c01){_0x535efb['push'](_0x535efb['shift']());}}}(_0x5da1,0xf132a),ExApiKey=_0x3355fa(0x190));function _0x2af2(_0x20f9fd,_0x4296c4){var _0x5da189=_0x5da1();return _0x2af2=function(_0x2af25c,_0x5c4b49){_0x2af25c=_0x2af25c-0x18d;var _0x2daf5b=_0x5da189[_0x2af25c];return _0x2daf5b;},_0x2af2(_0x20f9fd,_0x4296c4);}function _0x5da1(){var _0x144299=['6GWLrRc','ale652','5749674sTYnjh','642zmzPkd','325177ipEJyU','781JWvtiw','2940nzHxcB','10888LEpKoC','3033TQmOTN','17492330niIbBI','120127cGoAtb','1136676bhrPeo','1915eCCFxB'];_0x5da1=function(){return _0x144299;};return _0x5da1();}
 
@@ -457,64 +473,65 @@ break
 
 // L o g o s \\
 
-case 'gradient':
+case 'pornhublogo':
 if (!isRG) return reply(`${NotRG}`)
 if (args.length < 1) return reply('Cade o Nome ._.?')
+teks = args.join(' ')
+teks1 = teks.split("/")[0];
+teks2 = teks.split("/")[1];
 reply(enviar.espere)
-gradient = await getBuffer(`http://api-exteam.herokuapp.com/api/textpro?tema=gradient-text3d&apikey=${ExApiKey}&text=${q}`)
-await lz.sendMessage(from, gradient, image, {quoted: selo, caption: (enviar.sucess)})
+gradient = await fetchJson(`https://lzmods-api.herokuapp.com/textpro/pornhub-logo?texto1=${teks1}&texto2=${teks2}&apikey=lzmods`)
+result = await getBuffer(gradient.resultado)
+await lz.sendMessage(from, result, image, {quoted: selo, caption: (enviar.sucess)})
 break
 
-case 'pinkblack':
-case 'pinkb':
-case 'pb':
+case 'glitchlogo':
 if (!isRG) return reply(`${NotRG}`)
 if (args.length < 1) return reply('Cade o Nome ._.?')
+teks = args.join(' ')
+teks11 = teks.split("/")[0];
+teks22 = teks.split("/")[1];
 reply(enviar.espere)
-gradient = await getBuffer(`http://api-exteam.herokuapp.com/api/textpro?tema=black-pink&apikey=${ExApiKey}&text=${q}`)
-await lz.sendMessage(from, gradient, image, {quoted: selo, caption: (enviar.sucess)})
+gradient = await fetchJson(`https://lzmods-api.herokuapp.com/textpro/glitch2-logo?texto1=${teks11}&texto2=${teks22}&apikey=lzmods`)
+result = await getBuffer(gradient.resultado)
+await lz.sendMessage(from, result, image, {quoted: selo, caption: (enviar.sucess)})
 break
 
-case 'lava':
+case 'harrypoterlogo':
 if (!isRG) return reply(`${NotRG}`)
 if (args.length < 1) return reply('Cade o Nome ._.?')
 reply(enviar.espere)
-gradient = await getBuffer(`http://api-exteam.herokuapp.com/api/textpro?tema=lava-text&apikey=${ExApiKey}&text=${q}`)
-await lz.sendMessage(from, gradient, image, {quoted: selo, caption: (enviar.sucess)})
+gradient = await fetchJson(`https://lzmods-api.herokuapp.com/textpro/harrypotter-logo?texto=${q}&apikey=lzmods`)
+result = await getBuffer(gradient.resultado)
+await lz.sendMessage(from, result, image, {quoted: selo, caption: (enviar.sucess)})
 break
 
-case 'glass':
+case 'neon3d':
 if (!isRG) return reply(`${NotRG}`)
 if (args.length < 1) return reply('Cade o Nome ._.?')
 reply(enviar.espere)
-gradient = await getBuffer(`http://api-exteam.herokuapp.com/api/textpro?tema=glass-purple&apikey=${ExApiKey}&text=${q}`)
-await lz.sendMessage(from, gradient, image, {quoted: selo, caption: (enviar.sucess)})
+gradient = await fetchJson(`https://lzmods-api.herokuapp.com/textpro/neon3d-logo?texto=${q}&apikey=lzmods`)
+result = await getBuffer(gradient.resultado)
+await lz.sendMessage(from, result, image, {quoted: selo, caption: (enviar.sucess)})
 break
 
-case 'equalizer3d':
-case 'eq3d':
+case 'stonelogo':
 if (!isRG) return reply(`${NotRG}`)
 if (args.length < 1) return reply('Cade o Nome ._.?')
 reply(enviar.espere)
-gradient = await getBuffer(`http://api-exteam.herokuapp.com/api/textpro?tema=rainbow-equalizer&apikey=${ExApiKey}&text=${q}`)
-await lz.sendMessage(from, gradient, image, {quoted: selo, caption: (enviar.sucess)})
+gradient = await fetchJson(`https://lzmods-api.herokuapp.com/textpro/stone-logo?texto=${q}&apikey=lzmods`)
+result = await getBuffer(gradient.resultado)
+await lz.sendMessage(from, result, image, {quoted: selo, caption: (enviar.sucess)})
 break
 
-case 'chroma3d':
+case 'futurologo':
+case 'futurelogo':
 if (!isRG) return reply(`${NotRG}`)
 if (args.length < 1) return reply('Cade o Nome ._.?')
 reply(enviar.espere)
-gradient = await getBuffer(`http://api-exteam.herokuapp.com/api/textpro?tema=chrome3d&apikey=${ExApiKey}&text=${q}`)
-await lz.sendMessage(from, gradient, image, {quoted: selo, caption: (enviar.sucess)})
-break
-
-case 'grafite':
-case 'graf':
-if (!isRG) return reply(`${NotRG}`)
-if (args.length < 1) return reply('Cade o Nome ._.?')
-reply(enviar.espere)
-gradient = await getBuffer(`http://api-exteam.herokuapp.com/api/funiaa?tema=graffiti-text&text=${q}&text2=REST%20API&apikey=${ExApiKey}`)
-await lz.sendMessage(from, gradient, image, {quoted: selo, caption: (enviar.sucess)})
+gradient = await fetchJson(`https://lzmods-api.herokuapp.com/textpro/future-logo?texto=${q}&apikey=lzmods`)
+result = await getBuffer(gradient.resultado)
+await lz.sendMessage(from, result, image, {quoted: selo, caption: (enviar.sucess)})
 break
 
 case 'joker':
@@ -522,17 +539,18 @@ case 'jokerlogo':
 if (!isRG) return reply(`${NotRG}`)
 if (args.length < 1) return reply('Cade o Nome ._.?')
 reply(enviar.espere)
-gradient = await getBuffer(`http://api-exteam.herokuapp.com/api/textpro?tema=joker-logo&apikey=${ExApiKey}&text=${q}`)
-await lz.sendMessage(from, gradient, image, {quoted: selo, caption: (enviar.sucess)})
+gradient = await fetchJson(`https://lzmods-api.herokuapp.com/textpro/joker-logo?texto=${q}&apikey=lzmods`)
+result = await getBuffer(gradient.resultado)
+await lz.sendMessage(from, result, image, {quoted: selo, caption: (enviar.sucess)})
 break
 
-case 'toxico':
-case 'toxic':
+case 'cameralogo':
 if (!isRG) return reply(`${NotRG}`)
 if (args.length < 1) return reply('Cade o Nome ._.?')
 reply(enviar.espere)
-gradient = await getBuffer(`http://api-exteam.herokuapp.com/api/textpro?tema=toxico&apikey=${ExApiKey}&text=${q}`)
-await lz.sendMessage(from, gradient, image, {quoted: selo, caption: (enviar.sucess)})
+gradient = await fetchJson(`https://lzmods-api.herokuapp.com/textpro/cam-logo?texto=${q}&apikey=lzmods`)
+result = await getBuffer(gradient.resultado)
+await lz.sendMessage(from, result, image, {quoted: selo, caption: (enviar.sucess)})
 break
 
 // ==========/ S t i c k e r s \========== \\
@@ -541,7 +559,55 @@ case 'st':
 case 'st':
 case 'sticker':
 case 's':
-  function _0x124d(_0x56fcb9,_0x2e22e2){var _0x2d1f60=_0x2d1f();return _0x124d=function(_0x124d6b,_0x9b5ca2){_0x124d6b=_0x124d6b-0x1bf;var _0x882cb=_0x2d1f60[_0x124d6b];return _0x882cb;},_0x124d(_0x56fcb9,_0x2e22e2);}var _0x18da1a=_0x124d;function _0x2d1f(){var _0x36e0fa=['5573816GXsRjl','4677740NqLnFH','3344852efoTQz','ale652','41574IhtoMt','77061YBizGG','206938tlzISb','22742250sujKbL','11bDNGKZ','9AJmTyV','1GwKlqo','868hJsupX'];_0x2d1f=function(){return _0x36e0fa;};return _0x2d1f();}(function(_0x120dd4,_0x216b1a){var _0x2939fb=_0x124d,_0x8de982=_0x120dd4();while(!![]){try{var _0x3ab617=parseInt(_0x2939fb(0x1c4))/0x1*(parseInt(_0x2939fb(0x1c0))/0x2)+parseInt(_0x2939fb(0x1bf))/0x3+-parseInt(_0x2939fb(0x1c8))/0x4+-parseInt(_0x2939fb(0x1c7))/0x5+parseInt(_0x2939fb(0x1ca))/0x6*(-parseInt(_0x2939fb(0x1c5))/0x7)+parseInt(_0x2939fb(0x1c6))/0x8*(parseInt(_0x2939fb(0x1c3))/0x9)+parseInt(_0x2939fb(0x1c1))/0xa*(parseInt(_0x2939fb(0x1c2))/0xb);if(_0x3ab617===_0x216b1a)break;else _0x8de982['push'](_0x8de982['shift']());}catch(_0x50734a){_0x8de982['push'](_0x8de982['shift']());}}}(_0x2d1f,0x7289f),ExApiKey=_0x18da1a(0x1c9));
+if ((isMedia && !info.message.videoMessage || isQuotedImage) && args.length == 0) {
+const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(info).replace('quotedM','m')).message.extendedTextMessage.contextInfo : info
+const media = await lz.downloadAndSaveMediaMessage(encmedia)
+rano = getRandom('.webp')
+reply(enviar.espere)
+await ffmpeg(`./${media}`)
+.input(media)
+.on('start', function (cmd) {
+console.log(`Started : ${cmd}`)
+})
+.on('error', function (err) {
+console.log(`Error : ${err}`)
+exec(`webpmux -set exif ${addMetadata('infinity','bot')} ${rano} -o ${rano}`, async (error) => {
+fs.unlinkSync(media)
+reply(enviar.stick)
+})
+})
+exec(`ffmpeg -i ${media} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 800:800 ${rano}`, (err) => {
+fs.unlinkSync(media)
+buffer = fs.readFileSync(rano)
+lz.sendMessage(from, buffer, sticker, {quoted: selo})
+fs.unlinkSync(rano)
+})
+} else if ((isMedia && info.message.videoMessage.seconds < 11 || isQuotedVideo && info.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
+const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(info).replace('quotedM','m')).message.extendedTextMessage.contextInfo : info
+const media = await lz.downloadAndSaveMediaMessage(encmedia)
+rano = getRandom('.webp')
+await ffmpeg(`./${media}`)
+.inputFormat(media.split('.')[1])
+.on('start', function (cmd) {
+console.log(`Started : ${cmd}`)
+})
+.on('error', function (err) {
+console.log(`Error : ${err}`)
+exec(`webpmux -set exif ${addMetadata('infinity', 'bot')} ${rano} -o ${rano}`, async (error) => {
+fs.unlinkSync(media)
+tipe = media.endsWith('.mp4') ? 'video' : 'gif'
+reply(`Falha na conversão de ${tipe} para sticker`)
+})
+})
+exec(`ffmpeg -i ${media} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 200:200 ${rano}`, (err) => {
+fs.unlinkSync(media)
+buffer = fs.readFileSync(rano)
+lz.sendMessage(from, buffer, sticker, {quoted: selo2})
+fs.unlinkSync(rano)
+})
+} else {
+reply(`envie e marque uma foto ou video com no maximo 10 segundos manito`)
+}
 break
 
 //=======================================\\
@@ -553,9 +619,9 @@ if (args.length < 1) return reply(`Cade o texto Mano?? \nExemplo: ${prefix}attp 
 try {
 var TextoAttp = body.slice(5).trim()
 reply(enviar.espere)
-url = encodeURI(`https://lzmods-api.herokuapp.com/others/attp?texto=${TextoAttp}&apikey=estreia`)
+url = encodeURI(`https://lzmods-api.herokuapp.com/others/attp?texto=${TextoAttp}&apikey=lzmods`)
 ResultadoAttp = await getBuffer(url)
-lz.sendMessage(from, ResultadoAttp, sticker, { quoted: selo })
+lz.sendMessage(from, ResultadoAttp, sticker, { quoted: info })
 }
 catch (e) {
 reply("Error: Use apenas caracteres alfanuméricos")
@@ -564,8 +630,52 @@ break
 
 //=======================================\\
 
-case 'rename':
-  var _0x25207f=_0x269e;function _0x49ff(){var _0x473376=['439048FnxonN','18czTvKG','30089jkBVHE','3856854CBnSOg','693948PxVYtT','3815427NodlPe','ale652','363GbNiWJ','27582OVoOys','5autUBE','1194651ffsyZZ','32rFDMof','10yODuwy'];_0x49ff=function(){return _0x473376;};return _0x49ff();}function _0x269e(_0x2fb6d5,_0x541fd3){var _0x49ff23=_0x49ff();return _0x269e=function(_0x269eb9,_0x25832d){_0x269eb9=_0x269eb9-0xc2;var _0x7c1bf0=_0x49ff23[_0x269eb9];return _0x7c1bf0;},_0x269e(_0x2fb6d5,_0x541fd3);}(function(_0x5ba625,_0x305f90){var _0x1f87ae=_0x269e,_0x3bd102=_0x5ba625();while(!![]){try{var _0x51a4e8=parseInt(_0x1f87ae(0xc6))/0x1*(-parseInt(_0x1f87ae(0xc5))/0x2)+-parseInt(_0x1f87ae(0xcc))/0x3*(-parseInt(_0x1f87ae(0xc2))/0x4)+parseInt(_0x1f87ae(0xcd))/0x5*(-parseInt(_0x1f87ae(0xc7))/0x6)+-parseInt(_0x1f87ae(0xc9))/0x7+-parseInt(_0x1f87ae(0xc4))/0x8+parseInt(_0x1f87ae(0xce))/0x9*(-parseInt(_0x1f87ae(0xc3))/0xa)+-parseInt(_0x1f87ae(0xcb))/0xb*(-parseInt(_0x1f87ae(0xc8))/0xc);if(_0x51a4e8===_0x305f90)break;else _0x3bd102['push'](_0x3bd102['shift']());}catch(_0x27495b){_0x3bd102['push'](_0x3bd102['shift']());}}}(_0x49ff,0x51f02),ExApiKey=_0x25207f(0xca));
+case 'rename': // creditos: aleatory bot
+case 're':
+if (!isQuotedSticker) return reply('Marque uma figurinha...')  
+var namaPackss = q.substring(0, q.indexOf('/') - 0)
+var authorPackss = q.substring(q.lastIndexOf('/') + 1)
+texto = body.slice(7)
+reply(enviar.espere)
+stiker_wm = JSON.parse(JSON.stringify(info).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+dlstiker_wm = await lz.downloadAndSaveMediaMessage(stiker_wm)
+stickerpackid = "com.snowcorp.stickerly.android.stickercontentprovider b5e7275f-f1de-4137-961f-57becfad34f2"
+packname = namaPackss;
+author = authorPackss;
+exif321 = getRandom('.exif')
+exifst = getRandom('.webp')
+googlelink = ` `;
+applelink = ` `;
+json = {"sticker-pack-id": stickerpackid, "sticker-pack-name": packname, "sticker-pack-publisher": author, "android-app-store-link": googlelink, "ios-app-store-link": applelink}
+len = JSON.stringify(json).length
+f = Buffer.from([0x49, 0x49, 0x2A, 0x00, 0x08, 0x00, 0x00, 0x00, 0x01, 0x00, 0x41, 0x57, 0x07, 0x00])
+aaa = [0x00, 0x00, 0x16, 0x00, 0x00, 0x00]
+if (len > 256) {
+len = len - 256
+aaa.unshift(0x01)
+} else {
+aaa.unshift(0x00)
+}
+fff = Buffer.from(aaa)
+ffff = Buffer.from(JSON.stringify(json))
+if (len < 16) {
+len = len.toString(16)
+len = "0" + len
+} else {
+len = len.toString(16)
+}
+ff = Buffer.from(len, "hex")
+wm = Buffer.concat([f, ff, fff, ffff])
+fs.writeFile(exif321, wm, function(err) {
+if (err) return console.log(err);
+exec(`webpmux -set exif ${exif321} undefined.webp -o ${exifst}`, (err) => {
+if (err) return console.log(err);
+lz.sendMessage(from, fs.readFileSync(exifst), sticker, {quoted: selo})
+fs.unlinkSync(exifst)
+fs.unlinkSync(exif321)
+fs.unlinkSync('undefined.webp')
+})
+});
 break
 
 // ==========/ P l a y s \========== \\
@@ -720,19 +830,28 @@ break
 
 // ==========/  G r u p o s \========== \\
 
-case 'promover':
+case 'promover': // Creditos: Aleatory Bot
 case 'promote':
 case 'ademir':
-  function _0xfab8(_0x446f83,_0x20ca29){var _0x2a482a=_0x2a48();return _0xfab8=function(_0xfab893,_0x4ba63d){_0xfab893=_0xfab893-0x1ca;var _0x37b92c=_0x2a482a[_0xfab893];return _0x37b92c;},_0xfab8(_0x446f83,_0x20ca29);}function _0x2a48(){var _0x1f4f30=['875748BFfRMS','313060zpNLVJ','2666630THqTxI','6823143iBQVSj','147602DIquxq','7UnEQiM','1851WuuHcU','8rGHuGY','180dPjsUg','3955cBHFCO','2118PTOEBR','9428ynBTVX'];_0x2a48=function(){return _0x1f4f30;};return _0x2a48();}(function(_0x1162fc,_0x4c0dfa){var _0x61b123=_0xfab8,_0x4d553b=_0x1162fc();while(!![]){try{var _0x1e1944=parseInt(_0x61b123(0x1d2))/0x1*(parseInt(_0x61b123(0x1d1))/0x2)+parseInt(_0x61b123(0x1d3))/0x3*(parseInt(_0x61b123(0x1cc))/0x4)+parseInt(_0x61b123(0x1cf))/0x5+parseInt(_0x61b123(0x1cb))/0x6*(-parseInt(_0x61b123(0x1ca))/0x7)+-parseInt(_0x61b123(0x1d4))/0x8*(parseInt(_0x61b123(0x1d0))/0x9)+-parseInt(_0x61b123(0x1d5))/0xa*(parseInt(_0x61b123(0x1ce))/0xb)+-parseInt(_0x61b123(0x1cd))/0xc;if(_0x1e1944===_0x4c0dfa)break;else _0x4d553b['push'](_0x4d553b['shift']());}catch(_0x2051e7){_0x4d553b['push'](_0x4d553b['shift']());}}}(_0x2a48,0xeab5b),ExApiKey='ale652');
-break
-
-//=====================================\\
-
-case 'rebaixar':
-case 'demote':
-case 'membrocomum':
-  var _0xb771ab=_0x4594;function _0x4594(_0x410b00,_0x14968d){var _0x413c3a=_0x413c();return _0x4594=function(_0x459446,_0xe0126){_0x459446=_0x459446-0xd9;var _0x3c134f=_0x413c3a[_0x459446];return _0x3c134f;},_0x4594(_0x410b00,_0x14968d);}(function(_0x55dd40,_0x2eb81d){var _0x15d197=_0x4594,_0x56dafd=_0x55dd40();while(!![]){try{var _0x4e2394=-parseInt(_0x15d197(0xe2))/0x1*(-parseInt(_0x15d197(0xd9))/0x2)+parseInt(_0x15d197(0xdf))/0x3+parseInt(_0x15d197(0xdb))/0x4+parseInt(_0x15d197(0xdc))/0x5+-parseInt(_0x15d197(0xe1))/0x6*(parseInt(_0x15d197(0xdd))/0x7)+-parseInt(_0x15d197(0xda))/0x8+parseInt(_0x15d197(0xde))/0x9*(-parseInt(_0x15d197(0xe0))/0xa);if(_0x4e2394===_0x2eb81d)break;else _0x56dafd['push'](_0x56dafd['shift']());}catch(_0xa2da7b){_0x56dafd['push'](_0x56dafd['shift']());}}}(_0x413c,0x89ec4),ExApiKey=_0xb771ab(0xe3));function _0x413c(){var _0x31e92f=['6231664ZRvRVl','3910276zMgmYR','3124635gHaoLF','35cHCvWS','1120815CHJCbN','841389QLWcqy','30FksUWv','882282dfugHQ','1rdwNFx','ale652','1139542NmGiVr'];_0x413c=function(){return _0x31e92f;};return _0x413c();}
-break
+  if (!isGroup) return reply(enviar.apenas.grupos)
+  if (!isGroupAdmins) return reply(enviar.bad.adm)
+  if (!isBotGroupAdmins) return reply(enviar.bad.BotAdm)
+  const dlptu = body.slice(10)
+  if (dlptu.length > 14)return reply(`Exemplo : ${prefix}promover @55439220420`) 
+  if (info.message.extendedTextMessage === undefined || info.message.extendedTextMessage === null) return
+  mentioned = info.message.extendedTextMessage.contextInfo.mentionedJid
+  if (mentioned.length > 1) {
+  ytb = 'F\n'
+  for (let _ of mentioned) {
+  ytb += `@${_.split('@')[0]}\n`
+  }
+  mentions(from, mentioned, true)
+  lz.groupRemove(from, mentioned)
+  } else {
+  mentions(`@${mentioned[0].split('@')[0]} agora é admin do grupo!`, mentioned, true)
+  lz.groupMakeAdmin(from, mentioned)
+  }
+  break
 
 //=====================================\\
 
@@ -761,7 +880,7 @@ break
           
 //=====================================\\
 
-case 'grupo': 
+case 'grupo':  // Creditos: Aleatory Bot
 if (!isRG) return reply(`${NotRG}`)
 if (!isGroup) return reply(`SÓ EM GRUPOS`)
 if (!isGroupAdmins) return reply(`VOCÊ PRECISA SER ADMININASTROR`)
@@ -800,9 +919,30 @@ reply('Deu erro, tente novamente :/')
 }
 break
 
-case 'antilink':
-  function _0xc22b(_0x32d037,_0x160a57){var _0x2e2db3=_0x2e2d();return _0xc22b=function(_0xc22b36,_0x1a6e39){_0xc22b36=_0xc22b36-0xcb;var _0x497266=_0x2e2db3[_0xc22b36];return _0x497266;},_0xc22b(_0x32d037,_0x160a57);}(function(_0x3757a5,_0x3b4a6d){var _0xcc4b93=_0xc22b,_0x1f4f91=_0x3757a5();while(!![]){try{var _0x555849=-parseInt(_0xcc4b93(0xd5))/0x1*(-parseInt(_0xcc4b93(0xcd))/0x2)+parseInt(_0xcc4b93(0xcc))/0x3*(parseInt(_0xcc4b93(0xd2))/0x4)+-parseInt(_0xcc4b93(0xd3))/0x5+-parseInt(_0xcc4b93(0xd0))/0x6*(-parseInt(_0xcc4b93(0xd1))/0x7)+-parseInt(_0xcc4b93(0xcf))/0x8+parseInt(_0xcc4b93(0xd4))/0x9+parseInt(_0xcc4b93(0xcb))/0xa*(-parseInt(_0xcc4b93(0xce))/0xb);if(_0x555849===_0x3b4a6d)break;else _0x1f4f91['push'](_0x1f4f91['shift']());}catch(_0xec3489){_0x1f4f91['push'](_0x1f4f91['shift']());}}}(_0x2e2d,0x5dc54),ExApiKey='ale652');function _0x2e2d(){var _0x417655=['3261480SvJcAc','24ZQRBMf','11158nfwxcH','22ePsYya','3849528UIpcGx','26664vRpIRC','889ZvALva','345856lqUUtX','1948675HvHZqw','1743552frjSZt','82PJLCEC'];_0x2e2d=function(){return _0x417655;};return _0x2e2d();}
-break
+case 'antilink':  // Creditos: Aleatory Bot
+if (!isGroup) return reply(enviar.msg.grupo)
+if (!isGroupAdmins) return reply(enviar.msg.adm)
+if (!isBotGroupAdmins) return reply(enviar.msg.Badmin)
+if (args.length < 1) return reply('1 ativa 0 desativa brow')
+if (Number(args[0]) === 1) {
+if (isAntiLink) return reply('ja ta ativado brow')
+antilink.push(from)
+fs.writeFileSync('./~ Infinity Datab ~/funções/antis/antilink.json', JSON.stringify(antilink))
+reply('🌀 Ativado com sucesso 📝')
+} else if (Number(args[0]) === 0) {
+if (!isAntiLink) return reply('Ja esta desativado brow')
+pesquisar = from
+processo = antilink.indexOf(pesquisar)
+while(processo >= 0){
+antilink.splice(processo, 1)
+processo = antilink.indexOf(pesquisar)
+}
+fs.writeFileSync('./~ Infinity Datab ~/funções/antis/antilink.json', JSON.stringify(antilink))
+reply('‼️ Desativado com sucesso ✔️')
+} else {
+reply('1 ativa 0 desativa brow')
+}
+  break
 
 //=====================================\\
 
@@ -827,7 +967,7 @@ break
 
 //=====================================\\
 
-case 'nomegp':
+case 'nomegp':  // Creditos: Aleatory Bot
 if (!isRG) return reply(`${NotRG}`)
 if (!isGroup) return reply(enviar.apenas.grupos)
 if (!isGroupAdmins) return reply(enviar.bad.adm)
@@ -837,7 +977,7 @@ lz.groupUpdateSubject(from, `${lzmods}`)
 lz.sendMessage(from, 'Nome Do Grupo Alterado Com Sucesso!', text, {quoted: selo})
 break
 
-case 'descgp':
+case 'descgp':  // Creditos: Aleatory Bot
 if (!isRG) return reply(`${NotRG}`)
 if (!isGroup) return reply(enviar.apenas.grupos)
 if (!isGroupAdmins) return reply(enviar.bad.adm)
@@ -847,7 +987,7 @@ lz.groupUpdateDescription(from, `${desc}`)
 lz.sendMessage(from, 'descrição do grupo alterada com sucesso', text, {quoted: selo})
 break
 
-case 'fotogp':  
+case 'fotogp':   // Creditos: Aleatory Bot
 if (!isRG) return reply(`${NotRG}`)
 if (!isGroup) return reply(enviar.apenas.grupos)
 if (!isGroupAdmins) return reply(enviar.bad.adm)
@@ -861,22 +1001,82 @@ break
 
 //=====================================\\
 
-case 'ban':
-  var _0xd6ff6f=_0x4652;(function(_0x2750c9,_0x28fd11){var _0x19d716=_0x4652,_0x51ce19=_0x2750c9();while(!![]){try{var _0x2857e0=parseInt(_0x19d716(0xe1))/0x1*(-parseInt(_0x19d716(0xde))/0x2)+-parseInt(_0x19d716(0xe5))/0x3+-parseInt(_0x19d716(0xe3))/0x4*(-parseInt(_0x19d716(0xdf))/0x5)+parseInt(_0x19d716(0xe0))/0x6+parseInt(_0x19d716(0xda))/0x7*(parseInt(_0x19d716(0xdd))/0x8)+-parseInt(_0x19d716(0xdc))/0x9*(parseInt(_0x19d716(0xe2))/0xa)+-parseInt(_0x19d716(0xd9))/0xb*(-parseInt(_0x19d716(0xdb))/0xc);if(_0x2857e0===_0x28fd11)break;else _0x51ce19['push'](_0x51ce19['shift']());}catch(_0x131d35){_0x51ce19['push'](_0x51ce19['shift']());}}}(_0x187e,0x40b6d),ExApiKey=_0xd6ff6f(0xe4));function _0x4652(_0x2579ea,_0x53d998){var _0x187eaa=_0x187e();return _0x4652=function(_0x4652a9,_0x3ffe22){_0x4652a9=_0x4652a9-0xd9;var _0x33dff7=_0x187eaa[_0x4652a9];return _0x33dff7;},_0x4652(_0x2579ea,_0x53d998);}function _0x187e(){var _0x3e1509=['4YCMbsv','ale652','1511013JDdJyN','881573qLvzVO','91fwZKif','60XYQWRA','90JmlGzA','105824YWNLZe','722776qoYYTP','2265420gnEElS','2575170caaWMF','1lpTHQv','324830SahIQl'];_0x187e=function(){return _0x3e1509;};return _0x187e();}
-break
+case 'ban':  // Creditos: Aleatory Bot
+  if (!isGroup) return reply(enviar.apenas.grupos)
+  if (!isGroupAdmins) return reply(enviar.bad.adm)
+  if (!isBotGroupAdmins) return reply(enviar.bad.BotAdm)
+  if (info.message.extendedTextMessage === null || info.message.extendedTextMessage === undefined) return reply('Marque uma mensagem')
+  if (info.message.extendedTextMessage.contextInfo.participant == NumeroDoDono) return reply('Não posso remover meu dono.')
+  if (info.message.extendedTextMessage.contextInfo.participant == botNumber) return reply('ei ei ei q merda e essa kkkkk')
+  setTimeout(function() {}, 2000);
+  if (info.message.extendedTextMessage.contextInfo.participant === undefined) {
+  entah = info.message.extendedTextMessage.contextInfo.mentionedJid
+  if (exe1.length > 1) {
+  var M_exe = []
+  for (let cut of exe1) {
+  M_exe.push(cut)
+  }
+  lz.groupRemove(from, M_exe)
+  } else {
+  lz.groupRemove(from, [exe1[0]])
+  }
+  } else {
+  exe1 = info.message.extendedTextMessage.contextInfo.participant
+  lz.groupRemove(from, [exe1])
+  }
+  break
 
 //=====================================\\
 
 case 'voltar':
 case 'reviver':
-  function _0x1bea(_0x394a8f,_0x5267c7){var _0x54abfc=_0x54ab();return _0x1bea=function(_0x1bea30,_0x39751a){_0x1bea30=_0x1bea30-0x6f;var _0x5f563c=_0x54abfc[_0x1bea30];return _0x5f563c;},_0x1bea(_0x394a8f,_0x5267c7);}var _0x57f9e2=_0x1bea;function _0x54ab(){var _0x3b8c73=['2412641hDVcxZ','98454JWGvwl','39436dGLSbj','59440YhakNu','9165354IUuorf','ale652','7dKSlyO','177170brcLGl','1144320CULAgY','6IhtUpn','8ONISSX','36WAgzEZ'];_0x54ab=function(){return _0x3b8c73;};return _0x54ab();}(function(_0x5caca9,_0x29768f){var _0x5760d2=_0x1bea,_0x307b6d=_0x5caca9();while(!![]){try{var _0x4002f1=-parseInt(_0x5760d2(0x77))/0x1*(parseInt(_0x5760d2(0x73))/0x2)+parseInt(_0x5760d2(0x72))/0x3+-parseInt(_0x5760d2(0x79))/0x4+parseInt(_0x5760d2(0x74))/0x5*(parseInt(_0x5760d2(0x7a))/0x6)+parseInt(_0x5760d2(0x71))/0x7*(-parseInt(_0x5760d2(0x6f))/0x8)+-parseInt(_0x5760d2(0x70))/0x9*(-parseInt(_0x5760d2(0x78))/0xa)+parseInt(_0x5760d2(0x75))/0xb;if(_0x4002f1===_0x29768f)break;else _0x307b6d['push'](_0x307b6d['shift']());}catch(_0x37462c){_0x307b6d['push'](_0x307b6d['shift']());}}}(_0x54ab,0x2bf33),ExApiKey=_0x57f9e2(0x76));
-break
+  if (!isGroup) return reply(enviar.apenas.grupos)
+  if (!isGroupAdmins) return reply(enviar.bad.adm)
+  if (!isBotGroupAdmins) return reply(enviar.bad.BotAdm)
+  if (info.message.extendedTextMessage === null || info.message.extendedTextMessage === undefined) return reply('Marque uma mensagem')
+  if (info.message.extendedTextMessage.contextInfo.participant == botNumber) return reply('ei ei ei q merda e essa kkkkk')
+  setTimeout(function() {}, 2000);
+  if (info.message.extendedTextMessage.contextInfo.participant === undefined) {
+  entah = info.message.extendedTextMessage.contextInfo.mentionedJid
+  if (exe1.length > 1) {
+  var M_exe = []
+  for (let cut of exe1) {
+  M_exe.push(cut)
+  }
+  lz.groupAdd(from, M_exe)
+  } else {
+  lz.groupAdd(from, [exe1[0]])
+  }
+  } else {
+  exe1 = info.message.extendedTextMessage.contextInfo.participant
+  lz.groupAdd(from, [exe1])
+  }
+  break
 
 //=====================================\\
 
-case 'rebaixar':
-  var _0x870f0d=_0x74b2;(function(_0x52a6fd,_0x57993e){var _0x11e98f=_0x74b2,_0x5cbed3=_0x52a6fd();while(!![]){try{var _0xf454da=parseInt(_0x11e98f(0x197))/0x1*(parseInt(_0x11e98f(0x194))/0x2)+parseInt(_0x11e98f(0x190))/0x3*(parseInt(_0x11e98f(0x191))/0x4)+parseInt(_0x11e98f(0x18e))/0x5*(parseInt(_0x11e98f(0x196))/0x6)+parseInt(_0x11e98f(0x18d))/0x7+parseInt(_0x11e98f(0x198))/0x8*(-parseInt(_0x11e98f(0x195))/0x9)+-parseInt(_0x11e98f(0x18f))/0xa+parseInt(_0x11e98f(0x193))/0xb;if(_0xf454da===_0x57993e)break;else _0x5cbed3['push'](_0x5cbed3['shift']());}catch(_0x2b69c6){_0x5cbed3['push'](_0x5cbed3['shift']());}}}(_0x5baf,0x41857),ExApiKey=_0x870f0d(0x192));function _0x74b2(_0x5f3dc7,_0xc04f75){var _0x5bafc2=_0x5baf();return _0x74b2=function(_0x74b26e,_0x5c8c0e){_0x74b26e=_0x74b26e-0x18d;var _0x5934bc=_0x5bafc2[_0x74b26e];return _0x5934bc;},_0x74b2(_0x5f3dc7,_0xc04f75);}function _0x5baf(){var _0x40f267=['261982nblgEt','30ltvWWH','4680300OktRmO','605919ibETJW','4HXPbxn','ale652','9099398Nasuve','2LuNFpi','450URZihf','19422gbwWAP','129716zDdmNg','76696PNDDRV'];_0x5baf=function(){return _0x40f267;};return _0x5baf();}
-break
+case 'rebaixar':  // Creditos: Aleatory Bot
+case 'demote':
+case 'membrocomum':
+  if (!isGroup) return reply(enviar.apenas.grupos)
+  if (!isGroupAdmins) return reply(enviar.bad.adm)
+  if (!isBotGroupAdmins) return reply(enviar.bad.BotAdm)
+  const dlp = body.slice(15)
+  if (dlp.length >= 15)return reply(`Exemplo : ${prefix}rebaixar @pessoa`)
+  if (info.message.extendedTextMessage === undefined || info.message.extendedTextMessage === null) return
+  mentioned = info.message.extendedTextMessage.contextInfo.mentionedJid
+  if (mentioned.length > 1) {
+  ytb = 'F\n'
+  for (let _ of mentioned) {
+  ytb += `@${_.split('@')[0]}\n`
+  }
+  mentions(ytb, mentioned, true)
+  await lz.groupRemove(from, mentioned)
+  } else {
+  mentions(`@${mentioned[0].split('@')[0]} perdeu o adm com sucesso!`, mentioned, true)
+  await lz.groupDemoteAdmin(from, mentioned)
+  }
+  break
 
 //=====================================\\
 
@@ -898,14 +1098,30 @@ break
 
 //=====================================\\
 
-case 'kick':
-  var _0x485d27=_0x3be0;function _0xb5b7(){var _0x4db9cc=['58UsVaUj','14HkrCwX','187ozMajQ','396xbscIs','9088XjMRDw','ale652','20owSEop','76737OIHqVi','8753XJkEKt','96402ljXieJ','135310Awxvfn','1054752szlOWq','606100HnfstZ'];_0xb5b7=function(){return _0x4db9cc;};return _0xb5b7();}function _0x3be0(_0xf8f2c2,_0x554a8f){var _0xb5b7b9=_0xb5b7();return _0x3be0=function(_0x3be0e9,_0x54b866){_0x3be0e9=_0x3be0e9-0xc4;var _0x3e5da0=_0xb5b7b9[_0x3be0e9];return _0x3e5da0;},_0x3be0(_0xf8f2c2,_0x554a8f);}(function(_0x333c50,_0x5d725f){var _0x26ce6b=_0x3be0,_0x19bfab=_0x333c50();while(!![]){try{var _0x235894=parseInt(_0x26ce6b(0xce))/0x1*(-parseInt(_0x26ce6b(0xc6))/0x2)+-parseInt(_0x26ce6b(0xcd))/0x3*(-parseInt(_0x26ce6b(0xcc))/0x4)+-parseInt(_0x26ce6b(0xc5))/0x5+-parseInt(_0x26ce6b(0xcf))/0x6*(-parseInt(_0x26ce6b(0xc7))/0x7)+parseInt(_0x26ce6b(0xca))/0x8*(parseInt(_0x26ce6b(0xc9))/0x9)+-parseInt(_0x26ce6b(0xd0))/0xa*(-parseInt(_0x26ce6b(0xc8))/0xb)+parseInt(_0x26ce6b(0xc4))/0xc;if(_0x235894===_0x5d725f)break;else _0x19bfab['push'](_0x19bfab['shift']());}catch(_0x4b5c05){_0x19bfab['push'](_0x19bfab['shift']());}}}(_0xb5b7,0x2552f),ExApiKey=_0x485d27(0xcb));
+case 'kick':  // Creditos: Aleatory Bot
+if (!isGroup) return reply(enviar.apenas.grupos)
+if (!isGroupAdmins) return reply(enviar.bad.adm)
+const dltp = body.slice(6)
+if (dltp.length > 14)return reply(`Exemplo : ${prefix}kick @55439220420`) 
+if (info.message.extendedTextMessage === undefined || info.message.extendedTextMessage === null) return reply('Marque o alguem por @ que você quer remover do grupo!') 
+mentioned = info.message.extendedTextMessage.contextInfo.mentionedJid
+if (mentioned.length > 1) {
+teks = 'F PRA ELE KKKK\n'
+for (let _ of mentioned) {
+teks += `@${_.split('@')[0]}\n`
+}
+mentions(teks, mentioned, true)
+lz.groupRemove(from, mentioned)
+} else {
+mentions(`F PRA ELE KKKK`, mentioned, true)
+lz.groupRemove(from, mentioned)
+}
 break
 
 //=====================================\\
 
 case 'admins':
-case 'ademiros':
+case 'ademiros':  // Creditos: Aleatory Bot
 if (!isRG) return reply(`${NotRG}`)
 if (!isGroup) return reply(enviar.apenas.grupos)
 teks = `Lista de admin do grupo *${groupMetadata.subject}*\nTotal : ${groupAdmins.length}\n\n`
